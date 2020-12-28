@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DiscordJS - Ping Pong</title>
+  <title>DiscordJS</title>
   <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
   <link rel="stylesheet" href="stylesheet/prism.css">
   <link rel="stylesheet" href="stylesheet/style.css">
@@ -12,7 +12,7 @@
 <body>
 
   <!-- Introduction -->
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://www.gophersport.com/cmsstatic/img/663/g-58333-action-dodgemania-dodgeball-pe-class-set.jpg?medium');">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./images/wallpaper.png);">
     <div id="class-languages">
       <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
       <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
@@ -22,10 +22,10 @@
       <div class="main">
         <img src="images/logo.png" alt="">
         <div class="class-title">
-          <h1>DiscordJS - Ping Pong</h1>
+          <h1>DiscordJS: Ping Pong</h1>
         </div>
       </div>
-      <p>Hello! Tu t'es déjà demandé comment créer un bot discord? Aujourd'hui on va clarifier cela!</p>
+      <p>Hello! Tu t'es déjà demandé comment créer un bot discord? Aujourd'hui on va tenter d'en construire un!</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
@@ -45,15 +45,13 @@
         </div>
         <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant de t'attaquer à ce défi, on te conseille de compléter les défis suivants:</p>
+            <p>Avant de commencer ce défi, il te faut un certain nombre de comptes</p>
             <ol>
-              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je serai...</a></li>
-              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
-              <li><a href="https://techieslab.github.io/soap-bubble-adv_instructions/" target="_blank">Bulles de savant</a></li>
-              <li><a href="ttps://techieslab.github.io/10Print/" target="_blank">10 Print</a></li>
-              <li><a href="ttps://techieslab.github.io/WEBGL/" target="_blank">WEBGL</a></li>
-              <li><a href="ttps://techieslab.github.io/animation-3d/" target="_blank">Animation 3D</a></li>
+              <li>Pour créer un bot Discord, il va te falloir un compte Discord. Si tu n'as pas encore de compte, tu peux en créer un <a href="https://discord.com/register">ici</a>. Après avoir crée ton compte, le site te re-dirigera vers l'interface Discord.</li>
+              <li>Ensuite il te faut rejoindre un serveur Discord sur lequel tu peux mettre ton bot. On a un serveur Techies Lab que tu peux rejoindre et utiliser. Pour le rejoindre, cliques simplement sur le <a href="https://discord.gg/PKuDCUBBRg">lien suivant</a>. Quand tu as rejoint, demande à ton animateur de te donner le rôle de "Créateur de Bots", tu en aura besoin!</li>
+              <li>On va devoir coder quelque part, et l'endroit choisi pour ce faire est repl.it. Tu connais peut-être déjà cette plateforme, mais si tu ne la connais pas cela ne pose pas de problèmes! Tu peux créer un compte <a href="https://repl.it/signup">ici</a>, ou te connecter <a href="https://repl.it/login">ici</a> si tu as déjà un compte.</li>
             </ol>
+            <p>Si tu as tous ceci mis en place, tu peux commencer à créer ton bot dans l'étape 2.</p>
           </div>
         </div>
       </div>
@@ -63,17 +61,178 @@
         <div class="card-header" id="heading2">
           <h2 class="mb-0">
             <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-              Étape 2 - Le jeu
+              Étape 2 - Créer le Bot
             </button>
           </h2>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Le jeu qu'on va créer s'appelle "Dodge". Son but est très simple: Tu joues une petite balle qui doit aller de la gauche vers la droite de l'écran. Si le joueur ne fait rien, la balle bouge automatiquement à droite, et si le joueur clique sur sa souris, elle bouge à gauche. </p>
+            <p>On va créer le bot Discord! Pour ce faire, on doit aller sur la partie <a href="https://discord.com/developers">développeur de Discord</a>. Tu peux aussi trouver cette partie en allant tout en bas du site <a href="https://www.discord.com">Discord</a> et appuyer sur "Developers".</p>
 
-            <p>Jusque là, le jeu n'est pas bien difficile. Mais il y a un petit bonus: Des bombes vont tomber du ciel et essayer de détruire la pauvre balle. Tu dois donc éviter les bombes!</p>
+            <p>Sois sûr d'être dans la partie "Applications". Ici, tu peux choisir "New Application" dans le coin supérieur à droite. Il te faut alors lui donner un nom. Tu peux l'appeler comme tu veux.</p>
 
-            <p>Tu peux jouer à ma version du jeu <a href="/P5JS/index.html">ici</a>.</p>
+            <img src="./images/Applications.png" alt="Applications" width='100%'>
+
+            <p>Tu peux alors voir toutes les informations de ton application. Tu peux lui ajouter un icône et une description si tu le souhaites. Quand tu as changé ceux ci, n'oublie pas de sauvegarder en appuyant sur "Save Changes" en bas de l'écran.</p>
+
+            <img src="./images/GeneralInformation.png" alt="GeneralInformation" width='100%'>
+
+            <p>La partie intéressante se trouve dans la partie "Bot". Ici, tu peux appuyer sur "Add Bot" pour lier un bot à ton application. Tu devras confirmer en appuyant sur "Yes do it". Lorsqu'il est créé, cherches la partie "Public Bot" et désactive cette partie. (Sinon cela ne va pas marcher pour l'instant!)</p>
+
+            <img src="./images/PublicBot.png" alt="PublicBot" width='100%'>
+
+            <p>On va alors ajouter ce bot à notre serveur.</p>
+
+            <p>Va dans la section "OAuth2" et descend jusqu'en bas. Ici, coche la case "bot". Ensuite une nouvelle boîte apparaît en bas de l'écran. Ici, coche "Send Messages" pour permettre à notre bot d'envoyer des messages. Ensuite appuie sur "Copy" pour copier le lien de ton bot.</p>
+
+            <img src="./images/CopyLinkToBot.png" alt="CopyLinkToBot" width='100%'>
+
+            <p>Va alors sur le lien que tu viens de copier. Ici, tu seras demandé de sélectionner un serveur sur lequel ajouter ton bot. Sélectionnes le serveur Techies Lab.</p>
+
+            <img src="./images/AddToServer.png" alt="AddToServer" width='30%'>
+            
+            <p>Tu devrais voir ton bot apparaître sur le serveur! Il ne sait pas encore faire quoi que ce soit, mais il est là!</p>
+
+            <img src="./images/Welcome.png" alt="Welcome" width='60%'>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Étape 3 -->
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              Étape 3 - Coder le Bot
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>On va commencer à coder le bot. Connecte-toi à ton compte <a href="https://repl.it/~">repl.it</a>. Une fois sur la page choisit "+ New repl" pour créer un nouveau "repl" (Un nouveau code). Comme language, choisit "JavaScript" et donne lui un nom adapté.</p>
+            <img src="./images/NewRepl.png" alt="NewRepl" width='40%'>
+            <img src="./images/Language_Name.png" alt="Language+Name" width='80%'>
+
+            <p>Tu peux maintenant écrire du code dans la partie du milieu de l'écran. Au contraire du p5.js, rien n'y est écrit au début, on va devoir tout écrire par nous même!</p>
+
+            <p>Pour commencer, écris ces deux lignes suivantes:</p>
+
+            <pre><code class="language-js">
+              const Discord = require('discord.js');
+              const bot = new Discord.Client();
+            </code></pre>
+
+            <p>La première ligne importe la librairie "discord.js", qui est importante pour pouvoir coder un bot Discord. La seconde ligne crée un client Discord, qui va être l'intermédiaire entre notre code JavaScript et notre serveur Discord. Ce client est un peu comme la représentation du bot dans notre code, et on l'appelle donc <code>bot</code>.</p>
+
+            <p>Appuie sur le bouton "Run" en haut au milieu de l'écran. Repl.it va alors installer la librairie "discord.js", ceci pourrait prendre un peu de temps. Après, dans la console (Partie droite de l'écran), tu verra</p>
+
+            <pre><code class="language-js">
+              Hint: hit control+c anytime to enter REPL.
+            </code></pre>
+
+            <p>Lorsque cela apparaît, tu sais que ça a marché!</p>
+
+            <p>On va alors devoir activer le bot, c'est à dire le mettre en route. Pour ce faire, on va écouter le client jusqu'à ce qu'il dise qu'il soit prêt (Ou 'ready' en anglais). Quand il est prêt, on va exécuter la fonction en second paramètre.</p>
+
+            <pre><code class="language-js">
+              bot.on('ready', function(){
+                console.log('Connecté');
+              });
+            </code></pre>
+
+            <p>Essaie de lancer ce code. Est-ce qu'il écrit "Connecté" dans la console? Si tout se passe bien il y aura écrit plein de choses dans la console, mais il n'y aura pas écrit "Connecté". Sais-tu pourquoi?</p>
+
+            <p>On doit se connecter au bot! Pour le moment, on n'a pas encore précisé sur quel bot on travaille! Pour cela, on a besoin d'un "token".</p>
+
+            <p>Va sur le portail développeur de Discord, sur ton application créée à l'étape 2. Va dans la partie "Bot" et cherche la partie "Token":</p>
+
+            <img src="./images/Token.png" alt="Token" width='30%'>
+
+            <p>Appuie sur "Copy" pour copier ton token! On en a besoin pour se connecter au bot.</p>
+
+            <pre><code class="language-js">
+              bot.login('Ton Token');
+            </code></pre>
+
+            <p>Ajoute cette ligne de code à la fin de ton code. Remplace "Ton Token" par le token que tu viens de copier.</p>
+
+            <p>Lorsque tu lances le code tu devrais voir qu'il arrive à se connecter!</p>
+
+            <img src="./images/Connecté.png" alt="Connecté" width='60%'>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              Étape 4 - Envoyer des messages
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>On va maintenant envoyer des messages avec notre bot. Le bot qu'on va créer est très simple et sans but réel autre qu'éducatif: À chaque fois qu'un utilisateur envoie "Ping", le Bot répondra "Pong".</p>
+            
+            <p>Pour ce faire, on doit coder une façon de savoir si un message arrive ou non. On doit <b>écouter</b> si un <b>signal</b> arrive! Le signal en question est <code>'message'</code>. Te souviens tu comment faire?</p>
+
+            <pre><code class="language-js">
+              bot.on('message', ...);
+            </code></pre>
+
+            <p>On doit alors remplacer les '...' par une fonction! Faisons cela!</p>
+
+            <pre><code class="language-js">
+              bot.on('message', function() {
+                // ...
+              });
+            </code></pre>
+
+            <p>Dans le cas où on écoutait pour le signal <code>'ready'</code>, on avait une fonction comme celle ci. Mais ici on écoute pour le signal <code>'message'</code>, et donc un message vient avec le signal. La fonction prend donc un argument!</p>
+
+            <pre><code class="language-js">
+              bot.on('message', function(msg) {
+                // ...
+              });
+            </code></pre>
+
+            <p>Il ne nous reste qu'à vérifier si le contenu du message vaut "Ping", et dans ce cas on va répondre "Pong"!</p>
+
+            <p>Pour accéder au contenu du message, on utilise <code>msg.content</code>. Donc pour vérifier si le contenu vaut "Ping", on fait le suivant:</p>
+
+            <pre><code class="language-js">
+              if(msg.content === "Ping") {
+                // ...
+              }
+            </code></pre>
+
+            <p>Pour envoyer un message, on a deux options. Je te recommande d'essayer les deux et de déterminer par toi même lequel tu préfères.</p>
+
+            <ul>
+              <li>
+                <p>Pour répondre à l'utilisateur qui a envoyé le message, on utilise <code>msg.reply()</code></p>
+                <pre><code class="language-js">
+                  msg.reply("Pong");
+                </code></pre>
+              </li>
+              <li>
+                <p>Pour simplement envoyer un message dans le même canal que l'utilisateur qui a envoyé le premier message, on utilise <code>msg.channel.send()</code></p>
+                <pre><code class="language-js">
+                  msg.channel.send("Pong");
+                </code></pre>
+              </li>
+            </ul>
+
+            <p>Bravo! Ton bot est maintenant fonctionnel! Voici une liste de challenges si tu as fini à l'avance:</p>
+
+            <ul>
+              <li>Essaie de changer les mots que le bot détecte et qu'il répond.</li>
+              <li>Fait en sorte que le bot réponde à différents mots. Par exemple, mon bot répond "Pong" quand je dis "Ping", et il répond "Yang" quand je dis "Yin".</li>
+              <li>Rajoute beaucoup de mots différents! Pour rendre l'écriture plus facile, renseigne-toi sur ce qu'est un <code>switch</code> en JavaScript. Recherche "switch javascript" sur Google et essaie de comprendre pourquoi c'est utile ici!</li>
+            </ul>
           </div>
         </div>
       </div>

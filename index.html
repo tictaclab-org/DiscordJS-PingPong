@@ -25,7 +25,7 @@
           <h1>DiscordJS<br> Fiche 1</h1>
         </div>
       </div>
-      <p>Connaîs-tu Discord? Et les bots Discord? On peut les programmer en JavaScript grâce à la librarie <b>DiscordJS</b>!</p>
+      <p>Connais-tu Discord? Et les bots Discord? On peut les programmer en JavaScript grâce à la librarie <b>DiscordJS</b>!</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
@@ -47,11 +47,11 @@
           <div class="card-body">
             <p>Avant de commencer ce défi, il te faut un certain nombre de comptes</p>
             <ol>
-              <li>Pour créer un bot Discord, il va te falloir un compte Discord. Si tu n'as pas encore de compte, tu peux en créer un <a href="https://discord.com/register">ici</a>. Après avoir crée ton compte, le site te re-dirigera vers l'interface Discord.</li>
-              <li>Ensuite il te faut rejoindre un serveur Discord sur lequel tu peux mettre ton bot. On a un serveur Techies Lab que tu peux rejoindre et utiliser. Pour le rejoindre, cliques simplement sur le <a href="https://discord.gg/PKuDCUBBRg">lien suivant</a>. Quand tu as rejoint, demande à ton animateur de te donner le rôle de "Créateur de Bots", tu en aura besoin!</li>
-              <li>On va devoir coder quelque part, et l'endroit choisi pour ce faire est repl.it. Tu connais peut-être déjà cette plateforme, mais si tu ne la connais pas cela ne pose pas de problèmes! Tu peux créer un compte <a href="https://repl.it/signup">ici</a>, ou te connecter <a href="https://repl.it/login">ici</a> si tu as déjà un compte.</li>
+              <li>Pour créer un bot Discord, il va te falloir un <strong>compte Discord</strong>. Si tu n'as pas encore de compte, tu peux en créer un <a href="https://discord.com/register" target="_blank">ici</a>. Après avoir créé ton compte, le site te redirigera vers l'interface Discord.</li>
+              <li>Ensuite, il faut que tu te joignes à un <strong>serveur Discord</strong> sur lequel tu pourras lâcher ton bot. On a un serveur Techies Lab que tu peux utiliser pour tester ton bot. Pour te joindre à notre serveur, clique sur le <a href="https://discord.gg/PKuDCUBBRg" target="_blank">lien suivant</a>. Une fois que c'est fait, demande à ton animateur de te donner le rôle de "Créateur de Bots". Tu en auras besoin plus tard!</li>
+              <li>Finalement, on va devoir coder notre bot quelque part et pour cela, on va utiliser <strong>repl.it</strong>. Tu as peut-être déjà utilisé cette plateforme. Si ce n'est pas le cas, tu peux te créer un compte <a href="https://repl.it/signup" target="_blank">ici</a>. Si tu as déjà un compte, connecte-toi <a href="https://repl.it/login">ici</a>.</li>
             </ol>
-            <p>Si tu as tous ceci mis en place, tu peux commencer à créer ton bot dans l'étape 2.</p>
+            <p>Si tu as complété ces trois tâches, tu peux passer à l'étape 2.</p>
           </div>
         </div>
       </div>
@@ -67,31 +67,39 @@
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>On va créer le bot Discord! Pour ce faire, on doit aller sur la partie <a href="https://discord.com/developers">développeur de Discord</a>. Tu peux aussi trouver cette partie en allant tout en bas du site <a href="https://www.discord.com">Discord</a> et appuyer sur "Developers".</p>
+            <p>On va créer notre bot Discord! Pour ce faire, on doit aller sur la partie <a href="https://discord.com/developers" target="_blank">développeur de Discord</a>. Tu peux aussi trouver cette partie en allant tout en bas du site <a href="https://www.discord.com">Discord</a> et appuyer sur "Developers".</p>
 
-            <p>Sois sûr d'être dans la partie "Applications". Ici, tu peux choisir "New Application" dans le coin supérieur à droite. Il te faut alors lui donner un nom. Tu peux l'appeler comme tu veux.</p>
+            <p>Sois sûr.e d'être dans la partie "Applications". Ici, tu peux choisir "New Application" dans le coin supérieur à droite et donner un nom a ton application. Tu peux l'appeler comme tu veux.</p>
 
-            <img src="./images/Applications.png" alt="Applications" width='100%'>
+            <img src="./images/new_application.png" alt="New applications" width='100%'>
 
-            <p>Tu peux alors voir toutes les informations de ton application. Tu peux lui ajouter un icône et une description si tu le souhaites. Quand tu as changé ceux ci, n'oublie pas de sauvegarder en appuyant sur "Save Changes" en bas de l'écran.</p>
+            <p>Tu peux alors voir toutes les informations de ton application et lui ajouter une icône ainsi qu'une description, si tu le souhaites. Une fois que c'est fait, n'oublie pas de sauvegarder en appuyant sur "Save Changes" en bas de l'écran.</p>
 
             <img src="./images/GeneralInformation.png" alt="GeneralInformation" width='100%'>
 
-            <p>La partie intéressante se trouve dans la partie "Bot". Ici, tu peux appuyer sur "Add Bot" pour lier un bot à ton application. Tu devras confirmer en appuyant sur "Yes do it". Lorsqu'il est créé, cherches la partie "Public Bot" et désactive cette partie. (Sinon cela ne va pas marcher pour l'instant!)</p>
+            <p>Pour que ton application devienne agisse comme un bot, il faut que tu ailles dans la section "Bot":</p>
+            <img src="./images/bot_section.png" alt="Bot section">
+
+            <p>Ici, tu peux cliquer sur "Add Bot" pour lier un bot à ton application. Tu devras confirmer en cliquant sur "Yes, do it!". Lorsque c'est fait, cherche l'option "Public Bot" et désactive-la.</p>
 
             <img src="./images/PublicBot.png" alt="PublicBot" width='100%'>
 
-            <p>On va alors ajouter ce bot à notre serveur.</p>
 
-            <p>Va dans la section "OAuth2" et descend jusqu'en bas. Ici, coche la case "bot". Ensuite une nouvelle boîte apparaît en bas de l'écran. Ici, coche "Send Messages" pour permettre à notre bot d'envoyer des messages. Ensuite appuie sur "Copy" pour copier le lien de ton bot.</p>
+            <p>On va maintenant ajouter ce bot au serveur Techies. Dans la section "OAuth2/URL Generator", clique sur la case "bot" des options "SCOPES":</p>
+            <img src="./images/url_generator_bot.png" alt="Scopes Bot" width='100%'>
 
-            <img src="./images/CopyLinkToBot.png" alt="CopyLinkToBot" width='100%'>
+            <p>De nouvelles options "BOT PERMISSIONS" apparaissent en bas. Coche sur "Send Messages" pour permettre à ton bot d'envoyer des messages. Ensuite appuie sur "Copy" pour copier le lien de ton bot.</p>
 
-            <p>Va alors sur le lien que tu viens de copier. Ici, tu seras demandé de sélectionner un serveur sur lequel ajouter ton bot. Sélectionnes le serveur Techies Lab.</p>
+            <img src="./images/send_messages.png" alt="Send Messages" width='100%'>
+            <p>...</p>
+
+            <img src="./images/generated_url.png" alt="Generated URL" width='100%'>
+
+            <p>Colle le lien de ton bot dans un nouvel onglet de ton navigateur (Chrome, Firefox, etc.). Ici, on te demandera de sélectionner un serveur sur lequel ajouter ton bot. Sélectionne le serveur Techies Lab.</p>
 
             <img src="./images/AddToServer.png" alt="AddToServer" width='30%'>
-            
-            <p>Tu devrais voir ton bot apparaître sur le serveur! Il ne sait pas encore faire quoi que ce soit, mais il est là!</p>
+
+            <p>Tu devrais voir ton bot apparaître sur le serveur! Il ne fait rien pour l'instant, mais il est là!</p>
 
             <img src="./images/Welcome.png" alt="Welcome" width='60%'>
           </div>
@@ -176,7 +184,7 @@
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
             <p>On va maintenant envoyer des messages avec notre bot. Le bot qu'on va créer est très simple et sans but réel autre qu'éducatif: À chaque fois qu'un utilisateur envoie "Ping", le Bot répondra "Pong".</p>
-            
+
             <p>Pour ce faire, on doit coder une façon de savoir si un message arrive ou non. On doit <b>écouter</b> si un <b>signal</b> arrive! Le signal en question est <code>'message'</code>. Te souviens tu comment faire?</p>
 
             <pre><code class="language-js">
@@ -239,7 +247,7 @@
 
 
 
-    </div> 
+    </div>
   </div>
 
 
@@ -254,7 +262,7 @@
   <div class="footer-copyright">
     <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
       <i class="far fa-copyright"></i>
-      2021 Techies Lab ASBL. All rights reserved.
+      2022 Techies Lab ASBL. All rights reserved.
     </a>
   </div>
 </div>

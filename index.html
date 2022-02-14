@@ -118,11 +118,12 @@
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>On va commencer à coder le bot. Connecte-toi à ton compte <a href="https://repl.it/~">repl.it</a>. Une fois sur la page choisit "+ New repl" pour créer un nouveau "repl" (Un nouveau code). Comme language, choisit "JavaScript" et donne lui un nom adapté.</p>
-            <img src="./images/NewRepl.png" alt="NewRepl" width='40%'>
-            <img src="./images/Language_Name.png" alt="Language+Name" width='80%'>
+            <p>On va commencer à coder le bot. Connecte-toi à ton compte <a href="https://repl.it/~" target="_blank">repl.it</a>. Une fois sur la page, clique sur "+ Create" pour créer un nouveau projet. Comme langage, choisis "Node.js" et donne lui un nom adapté.</p>
+            <img src="./images/NewRepl.png" alt="NewRepl">
+            <p>...</p>
+            <img src="./images/langage_name.png" alt="Language+Name" width='80%'>
 
-            <p>Tu peux maintenant écrire du code dans la partie du milieu de l'écran. Au contraire du p5.js, rien n'y est écrit au début, on va devoir tout écrire par nous même!</p>
+            <p>Tu peux maintenant écrire du code dans la partie du milieu de l'écran. Contrairement aux projets p5.js, rien n'est écrit au départ, on va devoir tout écrire nous-mêmes!</p>
 
             <p>Pour commencer, écris ces deux lignes suivantes:</p>
 
@@ -133,7 +134,13 @@
 
             <p>La première ligne importe la librairie "discord.js", qui est importante pour pouvoir coder un bot Discord. La seconde ligne crée un client Discord, qui va être l'intermédiaire entre notre code JavaScript et notre serveur Discord. Ce client est un peu comme la représentation du bot dans notre code, et on l'appelle donc <code>bot</code>.</p>
 
-            <p>Appuie sur le bouton "Run" en haut au milieu de l'écran. Repl.it va alors installer la librairie "discord.js", ceci pourrait prendre un peu de temps. Après, dans la console (Partie droite de l'écran), tu verra</p>
+            <p>Appuie sur le bouton "Run" en haut au milieu de l'écran. Repl.it va alors installer la librairie "discord.js", ceci pourrait prendre un peu de temps.</p>
+
+            <p>Par défaut, repl.it installe la dernière version (no 13) de la librairie discord.js. Malheureusement, cette version n'est pas compatible avec la version d'une autre librairie utilisée par repl.it qui s'appelle <code class="language-js">node</code>.</p>
+
+            <p>Pour régler ce problème, on va utiliser la version précédente de discord.js.</p>
+
+            <p>Après, dans la console (Partie droite de l'écran), tu verra</p>
 
             <pre><code class="language-js">
               Hint: hit control+c anytime to enter REPL.

@@ -134,21 +134,30 @@
 
             <p>La première ligne importe la librairie "discord.js", qui est importante pour pouvoir coder un bot Discord. La seconde ligne crée un client Discord, qui va être l'intermédiaire entre notre code JavaScript et notre serveur Discord. Ce client est un peu comme la représentation du bot dans notre code, et on l'appelle donc <code>bot</code>.</p>
 
-            <p>Appuie sur le bouton "Run" en haut au milieu de l'écran. Repl.it va alors installer la librairie "discord.js", ceci pourrait prendre un peu de temps.</p>
+            <p>Appuie sur le bouton "Run" en haut au milieu de l'écran. Repl.it va alors installer la librairie "discord.js", ceci pourrait prendre un peu de temps. Le résultat dans la console est un message d'erreur:</p>
 
-            <p>Par défaut, repl.it installe la dernière version (no 13) de la librairie discord.js. Malheureusement, cette version n'est pas compatible avec la version d'une autre librairie utilisée par repl.it qui s'appelle <code class="language-js">node</code>.</p>
+            <img src="./images/error_cannot_find_module.png" alt="Error cannot find module">
 
-            <p>Pour régler ce problème, on va utiliser la version précédente de discord.js.</p>
+            <p>Par défaut, repl.it installe la dernière version (v13) de la librairie discord.js. Malheureusement, cette version n'est pas compatible avec la version de <strong>node</strong> (une autre librairie utilisée pour que notre projet JavaScript fonctionne).</p>
 
-            <p>Après, dans la console (Partie droite de l'écran), tu verra</p>
+            <p>Pour régler ce problème, on va utiliser une version plus "ancienne" de discord.js, à savoir la version 12.5.1. Tu as peut-être remarqué qu'après avoir cliqué sur le bouton "Run", deux nouveaux fichiers étaient apparus dans ton projet:</p>
+            <img src="./images/package_json.png" alt="package.json file">
+
+            <p>Dans le fichier <code class="language-js">package.json</code>, une des lignes indique la version de la librairie <strong>discord.js</strong> qui est installée dans ton projet. Dans mon cas, c'est la version 13.6.0:</p>
+
+            <img src="./images/dependencies.png" alt="package.json file">
+
+            <p>Pour rétrograder la version, il suffit de remplacer la version par celle souhaitée: <code class="language-js">"discord.js": "^12.5.1"</code></p>
+
+            <p>Clique à nouveau sur le bouton "Run". Si tu vois</p>
 
             <pre><code class="language-js">
               Hint: hit control+c anytime to enter REPL.
             </code></pre>
 
-            <p>Lorsque cela apparaît, tu sais que ça a marché!</p>
+            <p>tu sais que ça a marché!</p>
 
-            <p>On va alors devoir activer le bot, c'est à dire le mettre en route. Pour ce faire, on va écouter le client jusqu'à ce qu'il dise qu'il soit prêt (Ou 'ready' en anglais). Quand il est prêt, on va exécuter la fonction en second paramètre.</p>
+            <p>On va maintenant activer le bot, c'est-à-dire le mettre en route. Pour ce faire, on va écouter le client (notre appli Discord) jusqu'à ce qu'elle nous dise qu'elle est prête (<em>ready</em> en anglais). Quand l'appli est prête, on va exécuter la fonction, qui est passée en second paramètre.</p>
 
             <pre><code class="language-js">
               bot.on('ready', function(){
@@ -156,7 +165,7 @@
               });
             </code></pre>
 
-            <p>Essaie de lancer ce code. Est-ce qu'il écrit "Connecté" dans la console? Si tout se passe bien il y aura écrit plein de choses dans la console, mais il n'y aura pas écrit "Connecté". Sais-tu pourquoi?</p>
+            <p>Essaie de lancer ce code. Est-ce qu'il écrit "Connecté" dans la console? Normalement, la console affiche plein de choses, mais pas "Connecté". Sais-tu pourquoi?</p>
 
             <p>On doit se connecter au bot! Pour le moment, on n'a pas encore précisé sur quel bot on travaille! Pour cela, on a besoin d'un "token".</p>
 

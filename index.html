@@ -200,9 +200,9 @@
         </div>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
-            <p>On va maintenant envoyer des messages avec notre bot. Le bot qu'on va créer est très simple et sans but réel autre qu'éducatif: À chaque fois qu'un utilisateur envoie "Ping", le Bot répondra "Pong".</p>
+            <p>On va maintenant faire faire des choses à notre bot. Pour commencer, on va lui donner des instructions très simpes... et pas très utiles! Mais ça nous permettra de comprendre comment les bots fonctionnent. À chaque fois qu'un utilisateur de Discord écrira le message "Ping" dans une conversation, le Bot répondra "Pong".</p>
 
-            <p>Pour ce faire, on doit coder une façon de savoir si un message arrive ou non. On doit <b>écouter</b> si un <b>signal</b> arrive! Le signal en question est <code>'message'</code>. Te souviens tu comment faire?</p>
+            <p>Première étape: notre bot doit détecter lorsqu'un message est envoyé sur Discord. Dans la librairie <code class="language-js">discord.js</code>, le signal (ou l'alerte, si tu préfères) s'appelle <code class="language-js">'message'</code>. Comme pour le signal <code class="language-js">'ready'</code>, on peut écrire ceci:</p>
 
             <pre><code class="language-js">
               bot.on('message', ...);
@@ -216,7 +216,7 @@
               });
             </code></pre>
 
-            <p>Dans le cas où on écoutait pour le signal <code>'ready'</code>, on avait une fonction comme celle ci. Mais ici on écoute pour le signal <code>'message'</code>, et donc un message vient avec le signal. La fonction prend donc un argument!</p>
+            <p>Ici, notre fonction prend un paramètre (<code class="language-js">msg</code>) qui représente le message envoyé:</p>
 
             <pre><code class="language-js">
               bot.on('message', function(msg) {
@@ -224,17 +224,31 @@
               });
             </code></pre>
 
-            <p>Il ne nous reste qu'à vérifier si le contenu du message vaut "Ping", et dans ce cas on va répondre "Pong"!</p>
+            <p>Il ne nous reste plus qu'à vérifier si le contenu du message est bien "Ping", auquel cas notre bot répondra... "Pong"! Comment faire? Utilisons une condition!</p>
 
-            <p>Pour accéder au contenu du message, on utilise <code>msg.content</code>. Donc pour vérifier si le contenu vaut "Ping", on fait le suivant:</p>
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint4a" role="button" aria-expanded="false" aria-controls="collapseHint4a">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="collapseHint4a">
+              <div class="card card-body">
+                <p>Pour accéder au contenu du message, tu peux utiliser la propriété <code class="language-js">content</code> comme ceci: <code class="language-js">msg.content</code></p>
+              </div>
+            </div>
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer4a" role="button" aria-expanded="false" aria-controls="collapseAnswer4a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="collapseAnswer4a">
+              <div class="card card-body">
+                <p>Voici comment coder ta condition:</p>
+                <pre><code class="language-js">
+                  if(msg.content === "Ping") {
+                    // ...
+                  }
+                </code></pre>
+              </div>
+            </div>
 
-            <pre><code class="language-js">
-              if(msg.content === "Ping") {
-                // ...
-              }
-            </code></pre>
-
-            <p>Pour envoyer un message, on a deux options. Je te recommande d'essayer les deux et de déterminer par toi même lequel tu préfères.</p>
+            <p>Maintenant, pour que le bot réponde par le message <code class="language-js">"Pong"</code>, on a deux options. Je te recommande d'essayer les deux et de déterminer par toi-même laquelle tu préfères.</p>
 
             <ul>
               <li>
@@ -244,25 +258,23 @@
                 </code></pre>
               </li>
               <li>
-                <p>Pour simplement envoyer un message dans le même canal que l'utilisateur qui a envoyé le premier message, on utilise <code>msg.channel.send()</code></p>
+                <p>Pour renvoyer un message dans le même canal que l'utilisateur a utilisé, on utilise <code>msg.channel.send()</code></p>
                 <pre><code class="language-js">
                   msg.channel.send("Pong");
                 </code></pre>
               </li>
             </ul>
 
-            <p>Bravo! Ton bot est maintenant fonctionnel! Voici une liste de challenges si tu as fini à l'avance:</p>
+            <p>Bravo! Ton bot est maintenant fonctionnel! Teste-le dans Discord! Voici une liste de challenges si tu as fini à l'avance:</p>
 
             <ul>
-              <li>Essaie de changer les mots que le bot détecte et qu'il répond.</li>
-              <li>Fait en sorte que le bot réponde à différents mots. Par exemple, mon bot répond "Pong" quand je dis "Ping", et il répond "Yang" quand je dis "Yin".</li>
-              <li>Rajoute beaucoup de mots différents! Pour rendre l'écriture plus facile, renseigne-toi sur ce qu'est un <code>switch</code> en JavaScript. Recherche "switch javascript" sur Google et essaie de comprendre pourquoi c'est utile ici!</li>
+              <li>Essaie de changer le mot que le bot détecte et auquel il répond.</li>
+              <li>Fais en sorte que le bot réponde à différents mots. Par exemple, mon bot répond "Pong" quand je dis "Ping", et il répond "Yang" quand je dis "Ying".</li>
+              <li>Rajoute plusieurs mots différents! Pour rendre l'écriture plus facile, renseigne-toi sur ce qu'est un <code>switch</code> en JavaScript. Recherche "switch javascript" sur Google et essaie de comprendre pourquoi c'est utile ici!</li>
             </ul>
           </div>
         </div>
       </div>
-
-
 
     </div>
   </div>
